@@ -128,7 +128,7 @@ nav a {
   gap:.625rem;
   min-height:44px;
 }
-.soon-label {
+.store-label {
   background:var(--pink-soft);
   color:var(--pink-dark);
   padding:.25rem .625rem;
@@ -193,9 +193,8 @@ h1>span {
   background:var(--pink);
   color:var(--white);
 }
-.button:disabled {
-  cursor:not-allowed;
-  opacity:1;
+.button-primary:hover {
+  background:var(--pink-dark);
 }
 .availability {
   font-size:.875rem;
@@ -712,6 +711,52 @@ h1>span {
   margin-top:1.25rem;
   padding-top:1rem;
 }
+.button-secondary {
+  background:transparent;
+  color:var(--pink-dark);
+  box-shadow:inset 0 0 0 2px var(--pink);
+}
+.button-secondary:hover {
+  background:var(--pink-soft);
+}
+.inline-link {
+  color:var(--pink-dark);
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:.2em;
+}
+.visually-hidden {
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip-path:inset(50%);
+  white-space:nowrap;
+}
+.android {
+  padding-block:4.5rem;
+  border-top:1px solid var(--line);
+}
+.android-intro h2 {
+  margin-top:1.25rem;
+}
+.android-note {
+  font-size:.875rem;
+  color:var(--muted);
+  margin-top:1.25rem;
+  max-width:46ch;
+  padding-left:1rem;
+  border-left:2px solid var(--pink);
+}
+.android-steps {
+  margin-top:3rem;
+}
+.android-steps .button {
+  margin-top:1rem;
+  min-height:48px;
+  padding:.75rem 1.25rem;
+  font-size:.9375rem;
+}
 .closing {
   background:var(--pink-soft);
   padding-block:3.5rem;
@@ -779,7 +824,7 @@ section[id] {
   nav a {
     font-size:.75rem;
   }
-  .header-cta .soon-label {
+  .header-cta .store-label {
     display:none;
   }
   .hero {
@@ -838,7 +883,7 @@ section[id] {
   nav a {
     font-size:.875rem;
   }
-  .header-cta .soon-label {
+  .header-cta .store-label {
     display:inline;
   }
   .hero {
@@ -913,6 +958,20 @@ section[id] {
   .steps li {
     gap:1.5rem;
   }
+  .android {
+    padding-block:6rem;
+    display:grid;
+    grid-template-columns:.95fr 1.05fr;
+    gap:4rem;
+    align-items:start;
+  }
+  .android-steps {
+    margin-top:0;
+    gap:2.5rem;
+  }
+  .android-steps li {
+    gap:1.5rem;
+  }
   .closing {
     padding-block:4.5rem;
   }
@@ -971,7 +1030,7 @@ section[id] {
   font-size:.75rem;
 }
 @media(max-width:22rem) {
-  .header-cta .soon-label {
+  .header-cta .store-label {
     display:none;
   }
   .site-header .brand {
